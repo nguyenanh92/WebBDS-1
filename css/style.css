@@ -1,0 +1,52 @@
+.c-white {
+    color: white;
+}
+
+.c-yl {
+    color: #FFFF00;
+}
+.box-img{
+    position: relative;
+    
+}
+.box-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.box-img:before{
+    content: '';
+    padding-bottom: 66.69%;
+    display: block;
+}
+.h-96{
+    height: 96px;
+}
+
+li{
+    list-style: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ 
+@media (min-width: 768px){
+.button-lac {
+    animation-name: tada;
+    -webkit-animation-name: tada;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    
+}
+}
+@-webkit-keyframes tada{0%{-webkit-transform:scale(1);transform:scale(1);}10%,20%{-webkit-transform:scale(.9) rotate(-3deg);transform:scale(.9) rotate(-3deg);}30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);transform:scale(1.1) rotate(3deg);}40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);transform:scale(1.1) rotate(-3deg);}100%{-webkit-transform:scale(1) rotate(0);transform:scale(1) rotate(0);}}
+@keyframes tada{0%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}10%,20%{-webkit-transform:scale(.9) rotate(-3deg);-ms-transform:scale(.9) rotate(-3deg);transform:scale(.9) rotate(-3deg);}30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);-ms-transform:scale(1.1) rotate(3deg);transform:scale(1.1) rotate(3deg);}40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);-ms-transform:scale(1.1) rotate(-3deg);transform:scale(1.1) rotate(-3deg);}100%{-webkit-transform:scale(1) rotate(0);-ms-transform:scale(1) rotate(0);transform:scale(1) rotate(0);}}
