@@ -44,11 +44,11 @@ ul{
 ====================== */
 
 /* Main Footer */
-footer .main-footer{	padding: 20px 0;	background: #252525;}
+footer .main-footer{	padding: 20px 0;	background: #43A047;}
 footer ul{	padding-left: 0;	list-style: none;}
 
 /* Copy Right Footer */
-.footer-copyright {	background: #222;	padding: 5px 0;}
+.footer-copyright {	background: #2f8533;	padding: 5px 0;}
 .footer-copyright .logo {    display: inherit;}
 .footer-copyright nav {    float: right;    margin-top: 5px;}
 .footer-copyright nav ul {	list-style: none;	margin: 0;	padding: 0;}
@@ -77,13 +77,13 @@ footer.light .footer-copyright{	background: none repeat scroll 0 0 rgba(255, 255
 ====================== */
 .widget{	padding: 20px;	margin-bottom: 40px;}
 .widget.widget-last{	margin-bottom: 0px;}
-.widget.no-box{	padding: 0;	background-color: transparent;	margin-bottom: 40px;
+.widget.no-box{	padding: 0;	background-color: transparent;	margin-bottom: 20px;
 	box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
 .widget.subscribe p{	margin-bottom: 18px;}
 .widget li a{	color: #fff;}
 .widget li a:hover{	color: #aaa;text-decoration: none;}
 .widget-title {margin-bottom: 20px;}
-.widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
+.widget-title span {background: #ffffff none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
 .widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
 .widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
 .widget .badge{	float: right;	background: #7f7f7f;}
@@ -118,10 +118,9 @@ transition: all 250ms ease-in-out 0s;
 
 }
 
-.fa {
+#fa {
     display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    background-color: #3e3e3e;
+    background-color: #5fc764;
     color: #fff;
     padding: 9px;
     border-radius: 5px;
@@ -132,7 +131,7 @@ transition: all 250ms ease-in-out 0s;
 }
 
 #email {
-    background: rgba(255,255,255,0.075);
+    /* background: rgba(255,255,255,0.075); */
     padding: 10px 15px;
     color: #aaa;
     border: 3px solid rgba(0,0,0,0.1);
@@ -162,28 +161,173 @@ input.submitbutton.ripplelink {
     border-radius: 5px;
 }
 
-.thumb-content ::before {
-    content: "\f190";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    margin-left: 5px;
-    color: ##ffffff;
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+ 
+ 
+.modal-backdrop.show {
+    opacity: .8;
+}
+.modal-block {
+	position: fixed;
+	width: 95%;
+	max-width: 792px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	background-color: #fff;
+	color: #052A40;
+	padding-top: 48px;
+	padding-bottom: 65px;
+	border-radius: 3px;
+    
+}
+.modal-block__title {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 8px;
+}
+.modal-block__subtitle {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	margin-bottom: 32px;
+}
+.form form {
+display: flex;
+flex-direction: column;
+text-align: left;
+width: 95%;
+max-width: 384px;
+margin: auto;}
+.form__label span {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 6px;
+}
+.form__label input {
+	background: #F5F5F5;
+	border: 1px solid #DCE1E5;
+	border-radius: 2px;
+	padding-left: 3px;
+	height: 48px;
+	outline: none;
+	font-size: 24px;
+}
+.form__label__btn {
+	  height: 48px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FA2869), to(#F91B60));
+    background: linear-gradient(180deg, #FA2869 0%, #F91B60 100%);
+    -webkit-box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 13px;
+    cursor: pointer;
 }
 
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+@media(max-width: 576px) {
+    .login-page{
+        width: 100%;
+    }
+    .title-f{
+        font-size: 16px;
+    }
+}
+.form-1 {
+  position: relative;
+  z-index: 1;
+  background: #f2f2f2ed;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form-1 input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form-1 button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form-1 button:hover,.form-1 button:active,.form-1 button:focus {
+  background: #43A047;
+}
+.form-1 .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form-1 .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form-1 .register-form {
+  display: none;
+}
 
-
-
-
-
-
-
-
-
-
+ 
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+   
 @media (min-width: 768px){
     .button-lac {
         animation-name: tada;
