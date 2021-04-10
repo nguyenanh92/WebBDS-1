@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>GreenLand - Đất nền Hòa Lạc</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,18 +20,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.0/sweetalert2.min.css"
+        integrity="sha512-qZl4JQ3EiQuvTo3ccVPELbEdBQToJs6T40BSBYHBHGJUpf2f7J4DuOIRzREH9v8OguLY3SgFHULfF+Kf4wGRxw=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
+    <div id="cover-spin"></div>
+
     <!-- Image and text -->
-    <nav class="navbar navbar-default justify-content-center sticky-top"
-        style="background-color : #43A047 !important">
+    <nav class="navbar navbar-default justify-content-center sticky-top" style="background-color : #43A047 !important">
         <a class="navbar-brand" href="#">
             <img src="./img/logo.png" class="d-inline-block align-top" alt="">
         </a>
     </nav>
 
-    <div style="background-image: url('./img/bat-dong-san-hoa-lac.png');  background-repeat: no-repeat; background-size: cover  ; height: 70vh;;
+    <div style="background-image: url('./img/bat-dong-san-hoa-lac.png');  background-repeat: no-repeat; background-size: cover  ; height: 55vh;;
     ">
         <div class="container">
             <div class="row">
@@ -42,19 +46,25 @@
                         <div class="login-page">
                             <div class="form-1">
 
-                                <form class="login-form">
+                                <form class="login-form" id="my-form" action="https://formspree.io/f/xknknkyw"
+                                    method="POST">
                                     <h5 class="title-f">
-                                      <b>  Đăng ký thông tin
-                                        để nhận báo giá và tư vấn miễn phí.</b>
-                                      </h5>
-                                      <br/>
-                                    <input type="text" placeholder="Họ và tên" />
-                                     <input type="text" placeholder="Nhập số điện thoại" />
+                                        <b> Đăng ký thông tin
+                                            để nhận báo giá và tư vấn miễn phí.</b>
+                                    </h5>
 
-                                     <button>Liên hệ với chúng tôi ngay</button>
+                                    <br />
+                                    <p id="my-form-status" style="color: red;font-weight: bold;display: block;"></p>
+
+                                    <input type="hidden" name="type" value="Đăng ký tư vấn" />
+                                    <input type="text" name="name" placeholder="Họ và tên" />
+                                    <input type="text" name="phone" placeholder="Nhập số điện thoại" />
+
+                                    <button type="submit" id="my-form-button">Liên hệ với chúng tôi ngay</button>
                                     <p class="message">Đất nền Hòa Lạc 2021 - Hotline:
 
-                                        <a href="#"> 0971696555</a></p>
+                                        <a href="tel:0971696555"> 0971696555</a>
+                                    </p>
                                 </form>
                             </div>
                         </div>
@@ -421,7 +431,6 @@
 
     <br />
     <div class="container" style="background-color: #43A047;">
-
         <div class="row mb-5" style="padding: 30px;">
             <div class="col-md-6 " style="color: #fff;">
                 <div class="">
@@ -437,7 +446,7 @@
                     <p>
                         <strong>
                             <span style="color: #ffff00;">Liên hệ:
-                                <a href="tel:0971696555" style="color: black;">0971696555</a>
+                                <a href="tel:0971696555" style="color: white;">0971696555</a>
                             </span>
                         </strong>
                     </p>
@@ -446,19 +455,20 @@
                         </span>
                     </h3>
                     <div class="mt-3">
-                        <form>
+                        <form id="my-form-3" action="https://formspree.io/f/mnqlqlrj" method="POST">
+
                             <div class="form-row">
                                 <div class="col-4">
                                     <label for="pwd">Tên khách hàng:</label>
 
                                     <input type="text" class="form-control" id="" placeholder="Nhập họ tên" width="50"
-                                        name="email">
+                                        name="name">
                                 </div>
                                 <div class="col-4">
-                                    <label for="pwd">Số điện thoại:</label>
+                                    <label for="phone">Số điện thoại:</label>
 
                                     <input type="text" class="form-control" placeholder="Nhập số điện thoại"
-                                        name="pswd">
+                                        name="phone">
                                 </div>
                                 <div class="col-4" style="display: flex;">
                                     <div class="d-flex align-items-end">
@@ -466,6 +476,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <p style="color: red;font-weight: bold;" id="my-form-status-3"></p>
                         </form>
                     </div>
                 </div>
@@ -477,10 +489,170 @@
                 </div>
             </div>
         </div>
-
     </div>
 
+    <div class="container">
+        <h3 class="mt-5 mb-3" style="text-align: center; color:#43A047;font-weight: 700;"> CÁC DỰ ÁN PHÂN LÔ TẠI HÒA LẠC
+            </h4>
+            <p class="text-center" style="font-size: 14px;">Đ Với kênh đầu tư bất động sản luôn là điểm nóng cho những
+                A/C có một khoản tiền dư giả, Nhà đất luôn là những sản phấm đáng để đầu tư cả về lâu dài và lướt sóng .
+                Megaland luôn đưa cho quý A/c nhứng sản phẩm bất động sản tiềm năng và giá trị để đầu tư. Chính sách rõ
+                ràng, cơ chế thuận tiện, nhanh gọn và hiệu quả luôn được Megaland đặt lên hàng đầu.</p>
 
+            <div class="row mb-5 mt-5">
+
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac" onclick="showModal()">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-5">
+
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mb-3"
+                        style="/* background-color: #56BF56; *//* padding: 15px; */border-radius: 6px;border: 1px solid #ccc;box-shadow: 4px 5px 14px #0000001f;">
+                        <div class="mb-3 box-img">
+                            <img src="./img/tai-dinh-cu-dhqg-20210405044813.jpg" class="w-100">
+                        </div>
+
+
+                        <div style="padding: 0 15px 20px;">
+                            <div class=" text-center mb-3" style="font-weight: 700;font-size: 17px;color: #43A047;">72
+                                LÔ
+                                HÒA LẠC LOTUS -
+                                VIEW HỒ SEN</div>
+                            <div class="text-center"><span>GIÁ:</span> 1,400,000 VNĐ</div>
+                            <div class="mb-3 text-center">(ĐANG HOT ĐỂ ĐẦU TƯ)</div>
+                            <div>Với độ hot của đất Hòa Lạc thì 72 lô Lotus là một siêu phẩm trong làng bất động sản Hòa
+                                Lạc
+                                với giá siêu hấp dẫn.</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-danger button-lac" onclick="showModal()">NHẬN BẢNG GIÁ</button>
+                    </div>
+                </div>
+
+            </div>
+    </div>
 
     <footer id="footer" class="footer-1">
         <div class="main-footer widgets-dark typo-light pb-0">
@@ -514,7 +686,7 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
-                            <h5 class="widget-title">Quick Links<span></span></h5>
+                            <h5 class="widget-title">Liên kết<span></span></h5>
                             <ul class="thumbnail-widget">
                                 <li>
                                     <div class="">
@@ -541,24 +713,28 @@
 
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
-                            <h5 class="widget-title">Follow up<span></span></h5>
-                            <a href="#"> <i id="fa" class="fab fa-facebook-square"></i> </a>
-                            <a href="#"> <i id="fa" class="fab fa-twitter-square"></i></a>
-                            <a href="#"> <i id="fa" class="fab fa-youtube"></i> </a>
+                            <h5 class="widget-title">Theo dõi<span></span></h5>
+                            <a href="https://www.facebook.com/datnenhoalacgiarenhatthitruong" target="_blank"> <i
+                                    id="fa" class="fab fa-facebook-square"></i> </a>
+                            <a href="https://www.facebook.com/datnenhoalacgiarenhatthitruong" target="_blank"> <i
+                                    id="fa" class="fab fa-twitter-square"></i></a>
+                            <a href="https://www.facebook.com/datnenhoalacgiarenhatthitruong" target="_blank"> <i
+                                    id="fa" class="fab fa-youtube"></i> </a>
                         </div>
-                        <a href="#"><img src="./img/bct.png" width="160" /></a>
+                        <a href="https://www.facebook.com/datnenhoalacgiarenhatthitruong" target="_blank"><img
+                                src="./img/bct.png" width="160" /></a>
 
                     </div>
 
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
-                            <h5 class="widget-title">Contact Us<span></span></h5>
+                            <h5 class="widget-title">Liên hệ<span></span></h5>
                             <p>Theo dõi những thông tin mới nhất từ chúng tôi.</p>
                             <div class="emailfield">
                                 <input type="text" name="email" value="Email" id="email">
                                 <input name="uri" type="hidden" value="arabiantheme">
                                 <input name="loc" type="hidden" value="en_US">
-                                <input class="submitbutton ripplelink" type="submit" value="Subscribe">
+                                <input class="submitbutton ripplelink" type="button" value="Theo dõi">
                                 </form>
                             </div>
                         </div>
@@ -590,28 +766,63 @@
                         mới
                         nhất hàng tuần.</span>
                     <div class="form">
-                        <form action="#">
+                        <p id="my-form-status-2" style="color: red;font-weight: bold;display: block;"></p>
+
+                        <form id="my-form-2" action="https://formspree.io/f/mqkwkwny" method="POST">
                             <label class="form__label d-flex flex-column">
-                                <span>Họ tên Quý khách (*)</span>
-                                <input type="text">
+                                <span>Họ tên quý khách (*)</span>
+                                <input type="text" name="name">
                             </label>
                             <label class="form__label d-flex flex-column">
                                 <span>Số điện thoại (*)</span>
-                                <input type="text">
+                                <input type="text" name="phone">
                             </label>
                             <br />
                             <button type="submit" class="form__label__btn">NHẬN BẢNG GIÁ BÁN</button>
                         </form>
                     </div>
                     <p class="mt-2">Đất nền Hòa Lạc 2021 - Hotline: 0971696555</p>
-
+                    <div class=" ">
+                        <img src="./img/logo-black.png" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <a href="https://chat.zalo.me/?phone=0971696555" id="linkzalo" target="_blank" rel="noopener noreferrer">
+        <div id="fcta-zalo-tracking" class="fcta-zalo-mess">
+            <span id="fcta-zalo-tracking">Chat hỗ trợ</span>
+        </div>
+        <div class="fcta-zalo-vi-tri-nut">
+            <div id="fcta-zalo-tracking" class="fcta-zalo-nen-nut">
+                <div id="fcta-zalo-tracking" class="fcta-zalo-ben-trong-nut"> <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 460.1 436.6">
+                        <path fill="currentColor" class="st0"
+                            d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z">
+                        </path>
+                    </svg></div>
+                <div id="fcta-zalo-tracking" class="fcta-zalo-text">Chat ngay</div>
+            </div>
+        </div>
+    </a>
 
-
+    <div class="hotline-phone-ring-wrap">
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-img-circle">
+                <a href="tel:0971696555" class="pps-btn-img">
+                    <img src="./img/call.png" alt="Gọi điện thoại" width="50">
+                </a>
+            </div>
+        </div>
+        <div class="hotline-bar">
+            <a href="tel:0971696555">
+                <span class="text-hotline">0971.696.555</span>
+            </a>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -626,45 +837,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.0/sweetalert2.min.js"
+        integrity="sha512-jJHgrGWRvOyyVt4TghrM7L+HSb02QkXJPPBJhDIkiqEzUYWBKe76GVVsZggmjZWOmsPwS0WSPIvyUGZzJta8kg=="
+        crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
     <script>
-        function showModal() {
-            $('.bd-example-modal-lg').modal('toggle');
-
-        }
-
-
-        $('.carousel').carousel({
-            interval: 2000
-        });
-
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 4,
-            loop: true,
-            margin: 20,
-            autoHeight: false,
-            autoHeightClass: 'owl-height',
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                600: {
-                    items: 1,
-                    nav: false
-                },
-                1000: {
-                    items: 4,
-                    nav: false,
-                    loop: false
-                }
-            }
-        });
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { document.getElementById("linkzalo").href = "https://zalo.me/0971696555"; }
     </script>
 </body>
 
